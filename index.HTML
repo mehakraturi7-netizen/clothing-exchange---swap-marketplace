@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloth Swap App</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="first.js"></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">ThreadSwap</div>
+    <ul class="nav-links">
+      <li><a href="#">Browse</a></li>
+      <li><a href="#">My Wardrobe</a></li>
+      <li><a href="#">Requests</a></li>
+      <li><a href="#">Messages</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-login">Log in</button>
+      <button class="btn-primary">List Item</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Swap clothes, not waste</h1>
+    <p>Exchange clothes you no longer wear with people near you.</p>
+    <div class="hero-buttons">
+      <button class="btn-primary">Start Swapping</button>
+      <button class="btn-outline">How it Works</button>
+    </div>
+  </section>
+
+  <!-- FILTER BAR -->
+  <section class="filter-bar">
+    <button class="filter-chip active">All</button>
+    <button class="filter-chip">Swap</button>
+    <button class="filter-chip">Donate</button>
+    <button class="filter-chip">Rent</button>
+    <button class="filter-chip">Tops</button>
+    <button class="filter-chip">Bottoms</button>
+    <button class="filter-chip">Dresses</button>
+  </section>
+
+  <!-- LISTINGS GRID -->
+  <section class="listings">
+    <h2>Browse Listings</h2>
+    <div class="listings-grid">
+
+      <!-- Single Cloth Card -->
+      <div class="cloth-card">
+        <div class="card-image">
+          <img src="https://www.only.in/cdn/shop/files/902067001_g0_b951683e-a65b-41a9-97f0-555628c3ac25.jpg?v=1753690535&width=700" alt="White linen shirt"/>
+          <span class="badge badge-swap">Swap</span>
+        </div>
+        <div class="card-body">
+          <h3 class="item-title">White Linen Shirt</h3>
+          <p class="item-meta">Size M &bull; Worn twice</p>
+          <div class="item-owner">
+            <div class="avatar">Ak</div>
+            <span>Akanksha.</span>
+          </div>
+          <button class="btn-request">Request Swap</button>
+        </div>
+      </div>
+
+      <!-- Repeat .cloth-card for more items -->
+
+    </div>
+  </section>
+
+  <!-- SWAP MATCH -->
+  <section class="swap-match">
+    <h2>Your Match</h2>
+    <div class="match-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThWczB7rjPkLvQiDU6Wy-Svi541kWrFMrAUV_9LxMfwg&s=10.jpg" alt="Your item" class="match-thumb kurta" />
+    <span class="swap-arrow">&harr;</span>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr7IXdCClG4o4-z3NRq3odHcLvZQl5wl_iJMtY5RKhvg&s=10" alt="Their item" class="match-thumb dress" />
+    <div class="match-info">
+        <h3>Match found!</h3>
+        <p>Ananya wants to swap her dress for your kurta.</p>
+        <button class="btn-primary">Review Match</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIST AN ITEM FORM -->
+  <section class="list-item">
+    <h2>List Your Item</h2>
+    <form class="item-form">
+      <div class="upload-zone">
+        <input type="file" id="item-photo" accept="image/*" />
+        <label for="item-photo">Upload Photo</label>
+      </div>
+      <input type="text" name="title" placeholder="Item name (e.g. Blue denim jacket)" />
+      <select name="category">
+        <option value="">Category</option>
+        <option>Tops</option>
+        <option>Bottoms</option>
+        <option>Dresses</option>
+        <option>Outerwear</option>
+      </select>
+      <select name="size">
+        <option value="">Size</option>
+        <option>XS</option><option>S</option>
+        <option>M</option><option>L</option><option>XL</option>
+      </select>
+      <select name="type">
+        <option value="">Listing type</option>
+        <option>Swap</option>
+        <option>Donate</option>
+        <option>Rent</option>
+      </select>
+      <select name="condition">
+        <option value="">Condition</option>
+        <option>Like new</option>
+        <option>Good</option>
+        <option>Worn</option>
+      </select>
+      <textarea name="description" placeholder="Any extra details..."></textarea>
+      <button type="submit" class="btn-primary">Publish Listing</button>
+    </form>
+  </section>
+
+  <!-- USER PROFILE / WARDROBE -->
+  <section class="profile">
+    <div class="profile-card">
+      <div class="avatar large">Akanksha</div>
+      <h3>Akanskah</h3>
+      <p>Dehradun &bull; Joined 2024</p>
+      <div class="profile-stats">
+        <div class="stat"><span>8</span> Listed</div>
+        <div class="stat"><span>5</span> Swapped</div>
+        <div class="stat"><span>4.9★</span> Rating</div>
+      </div>
+    </div>
+    <div class="my-wardrobe">
+      <h3>My Wardrobe</h3>
+      <div class="wardrobe-grid">
+        <div class="wardrobe-thumb"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHH85TndhsTUbDpzgewaflIOQHbpUucMULC7Y1fam7zA&s=10" alt="Tops" /></div>
+        <div class="wardrobe-thumb"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfHY63KLwDJkyJGogazP8SmNLOBq_9rrb7OvGzCP3iUw&s=10" alt="Bottom wear" /></div>
+        <div class="wardrobe-thumb add-new">+</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 ThreadSwap &bull; <a href="#">Terms</a> &bull; <a href="#">Privacy</a></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
